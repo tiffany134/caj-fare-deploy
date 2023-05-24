@@ -3,6 +3,7 @@ apiVersion: triggers.tekton.dev/v1beta1
 kind: EventListener
 metadata:
   name: caj-fare-github-listener
+  name: user5
 spec:
   triggers:
     - name: github-listener
@@ -70,7 +71,7 @@ spec:
       - name: git-revision
         value: $(tt.params.gitrevision)
       - name: image
-        value: image-registry.openshift-image-registry.svc:5000/caj-fare/caj-fare
+        value: image-registry.openshift-image-registry.svc:5000/user5/caj-fare
       - name: dockerfile
         value: Dockerfile-openjdk
       - name: manifest-git-url
